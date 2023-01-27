@@ -8,7 +8,7 @@ pacman::p_load(igraph,      # for making graph objects in R
                RCurl,       # for reading in text files from a URL
                wesanderson) # for creating the color palette below
 
-data <- getURL("https://raw.githubusercontent.com/Gchism94/AntColonyPerformance/main/analysis/data/raw_data/Colony18CircleAggnRMatrix.csv")
+data <- getURL("https://raw.githubusercontent.com/Gchism94/AntColonyPerformance/main/analysis/data/raw_data/Colony18CircleAggnNRMatrix.csv")
 data <- read.csv(text = data, row.names = 1, header = TRUE)
 
 ## Examine the data
@@ -69,11 +69,14 @@ pal <- wes_palette("Zissou1", 100, type = "continuous")
 weight = E(network)$weight
 
 # Plot the graph
-ggraph(network, layout = "stress") +
-  geom_edge_link(arrow = arrow(type = "closed", length = unit(3, 'mm')),
-                 end_cap = circle(3, 'mm'),
-                 aes(alpha = weight)) +
+p <- ggraph(network, layout = "stress") +
+  geom_edge_link(aes(alpha = weight)) +
   geom_node_point(aes(fill = d, size = d), shape = 21) + 
   scale_size("Degree") +
   scale_fill_gradientn("Degree", colours = pal) +
-  theme_graph() 
+  theme_graph() +
+  theme(legend.position = "bottom")
+
+p
+
+ggsave(plot = p, "network.png", width = 10, height = 10, units = "in", dpi = 400)
