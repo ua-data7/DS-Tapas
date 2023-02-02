@@ -36,10 +36,10 @@ network <- graph_from_adjacency_matrix(data_mat, weighted = TRUE, mode = "direct
 class(network)
 
 ## Network analyses
-# Number of edges in the matrix
+# Number of nodes in the matrix
 m <- gorder(network)
 
-# Number of nodes in the matrix
+# Number of edges in the matrix
 n <- gsize(network)
 
 # Network degree
