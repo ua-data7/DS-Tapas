@@ -10,7 +10,7 @@ Applied Data Science knowledge capsules (aka DS-Tapas). Find out more: https://d
 | Date | Title | Educator | Materials|
 |------|-------|----------|----------|
 | 02-Feb-2023 | Network Visualization in R | Greg Chism| [LINK](https://github.com/ua-data7/DS-Tapas/tree/main/Workshops/Spring2023/2023-Feb-02) |
-| 09-Feb-2023 | Handling Data Outliers | Carlos Lizarraga | |
+| 09-Feb-2023 | Outliers Analysis and Anomalies Detection | Carlos Lizarraga | [LINK](https://github.com/clizarraga-UAD7/Workshops/wiki/Outlier-analysis-and-anomalies-detection) |
 | 16-Feb-2023 | REDCap to R with API | Heidi Steiner | |
 | 23-Feb-2023 | Simulating Data for Statistical Design in R | Greg Chism | |
 | 02-Mar-2023 | Low-code Exploratory Data Analysis | Carlos Lizarraga | |
