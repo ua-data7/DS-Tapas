@@ -3,6 +3,7 @@
 ## Date: 2023-02-02
 ## Description: Example of how to visualize network data in R with the ggraph package
 
+# Install and load required packages
 pacman::p_load(igraph,      # for making graph objects in R
                ggraph,      # for plotting graphs with ggplot2 syntax
                RCurl,       # for reading in text files from a URL
@@ -11,7 +12,7 @@ pacman::p_load(igraph,      # for making graph objects in R
 data <- getURL("https://raw.githubusercontent.com/Gchism94/AntColonyPerformance/main/analysis/data/raw_data/Colony18CircleAggnNRMatrix.csv")
 data <- read.csv(text = data, row.names = 1, header = TRUE)
 
-## Examine the data
+# Examine the data
 head(data)
 
 # Data type
