@@ -1,0 +1,78 @@
+---
+title: "Example Clinical Study Report"
+author: "Heidi"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "", message = FALSE)
+
+library(knitr)
+library(REDCapR)
+library(REDCapTidieR)
+library(tableone)
+library(tidyverse)
+library(usethis)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. R Markdown is a great way to create reproducible reports for your team! 
+
+## Data Import 
+
+Let's use a test REDCap project from the `REDCapR` documentation. Set/edit your token with `usethis::edit_r_environ()`. 
+
+```{r}
+
+tidyREDCap::import_instruments(
+  url = "https://bbmc.ouhsc.edu/redcap/api/", # What's UArizona's?  
+  token = Sys.getenv("redcap_api_token")
+)
+
+metadata <- redcap_metadata_read(redcap_uri = "https://bbmc.ouhsc.edu/redcap/api/", 
+                                 token = Sys.getenv("redcap_api_token"))$data
+```
+
+## Data Dictionary
+
+You can neatly present the data dictionary with your reports without copying and pasting or including a large spreadsheet. 
+
+```{r}
+metadata |> 
+  kable()
+```
+
+## Table 1 
+
+```{r}
+dat <- demographics |> 
+  select(age, record_id) |> 
+  full_join(health |> select(record_id, height, weight, health_complete)) |> 
+  select(-record_id) |> 
+  mutate(health_complete = as.factor(health_complete)) 
+
+tableVars <- dat |> 
+  colnames()
+
+tableOne <- CreateTableOne(data = dat
+               , vars = tableVars)
+
+print(tableOne, contDigits = 1)
+```
+
+
+## Data Validation Graphic
+
+```{r echo = FALSE}
+health |> 
+  full_join(demographics) |> 
+ggplot() + 
+  geom_point(aes(height, weight, color = sex)
+             , size = 1.3) +
+  theme_linedraw()
+```
+
