@@ -32,15 +32,10 @@ Check out the [slides](https://hidyverse.github.io/redcapAPI).
 
 5.  Ensure designated users have API rights
 
-::: columns
-::: {.column style="width: 45%;"}
 ![](images/redcap_user_rights_api.png)
-:::
 
-::: {.column style="width: 45%;"}
 ![](images/redcap_api_export.png)
-:::
-:::
+
 
 Read about REDCap's API and API playground in this [great blog post](https://education.arcus.chop.edu/redcap-api/) by Joy Payton at CHOP.
 
