@@ -8,6 +8,8 @@ date: "`r Sys.Date()`"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = "", message = FALSE)
 
+# install.packages(c("knitr", "REDCapR", "REDCapTidieR", "tableone", "tidyverse", "usethis"))
+
 library(knitr)
 library(REDCapR)
 library(REDCapTidieR)
