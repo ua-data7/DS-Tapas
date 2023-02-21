@@ -1,6 +1,7 @@
 # DS-Tapas
-Applied Data Science knowledge capsules (aka DS-Tapas). Find out more: https://datascience.arizona.edu/events/data-science-tapas 
+Applied Data Science knowledge capsules (aka DS-Tapas). [Find out more!](https://datascience.arizona.edu/events/data-science-tapas)
 
+[Leave us feedback](https://uarizona.co1.qualtrics.com/jfe/form/SV_dmxCZsorVVr5lA2)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
