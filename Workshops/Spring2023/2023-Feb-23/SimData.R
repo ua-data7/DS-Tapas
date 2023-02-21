@@ -1,4 +1,4 @@
-## Title: Simulating data for statistical design in R
+## Title: Simulating data for study design in R
 ## Author: Greg Chism
 ## Date: 2023-02-23
 ## Description: Example of how to simulate study data in R for statistical design
