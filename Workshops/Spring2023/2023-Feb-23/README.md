@@ -2,7 +2,7 @@
 
 February 23, 2023
 
-## Simulating Data for Statistical Design in R
+## Simulating Data for Study Design in R
 
 Description: Simulating data is a powerful tool towards study design. In particular, simulated data can allow one to run a-priori statistical power analyses to understand what sample size is needed to detect different effect sizes.
 
