@@ -16,10 +16,10 @@ Applied Data Science knowledge capsules (aka DS-Tapas). [Find out more!](https:/
 | 23-Feb-2023 | Simulating Data for Study Design in R | Greg Chism | [LINK](https://github.com/ua-data7/DS-Tapas/tree/main/Workshops/Spring2023/2023-Feb-23) |
 | 02-Mar-2023 | Low-code Exploratory Data Analysis | Carlos Lizarraga | |
 | 16-Mar-2023 | GWAS in Hail | Heidi Steiner | |
-| 23-Mar-2023 | TBD | Greg Chism | |
+| 23-Mar-2023 | Power analysis in R | Greg Chism | |
 | 30-Mar-2023 | TBD | Carlos Lizarraga | |
 | 06-Apr-2023 | Metagenomics with phyloseq in R | Heidi Steiner | |
-| 13-Apr-2023 | TBD | Greg Chism | |
+| 13-Apr-2023 | K-means clustering with tidy data principles | Greg Chism | |
 | 20-Apr-2023 | TBD | Carlos Lizarraga | |
 | 27-Apr-2023 | ggplot | Heidi Steiner | |
 
