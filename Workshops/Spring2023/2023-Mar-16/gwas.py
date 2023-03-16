@@ -1,3 +1,18 @@
+#### open CyVerse discovery environment
+#### launch jupyterlab datascience app
+#### open terminal from launcher
+#### install java
+#### `sudo apt update`
+#### `sudo apt install openjdk-8-jdk`
+#### install hail
+#### `pip install hail`
+
+#### make a new directory in `~datascience/` 
+#### not called  `data`
+
+#### open jupyter notebook from launcher
+
+
 #### load python packages 
 import hail as hl
 
@@ -9,7 +24,7 @@ hl.plot.output_notebook()
 import hail as hl
 from hail.plot import show
 from pprint import pprint
-# from bokeh.io import save # To save your plots! 
+from bokeh.plotting import output_file, save
 
 #### Download public 1000 Genomes data as example
 hl.utils.get_1kg('data/')
@@ -66,6 +81,9 @@ mt.col.describe()
 p = hl.plot.histogram(mt.sample_qc.call_rate, range=(.88,1), legend='Call Rate')
 show(p)
 
+# output_file('callRateHistogram.html')
+# save(p)
+
 #### Subset data by random QC cutoffs
 mt = mt.filter_cols((mt.sample_qc.dp_stats.mean >= 4) & (mt.sample_qc.call_rate >= 0.97))
 print('After filter, %d/284 samples remain.' % mt.count_cols())
@@ -90,3 +108,6 @@ gwas.row.describe()
 #### plot results
 p = hl.plot.manhattan(gwas.p_value)
 show(p)
+
+output_file('manhattan.html')
+save(p)
