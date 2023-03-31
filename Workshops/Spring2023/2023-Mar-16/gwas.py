@@ -1,3 +1,9 @@
+# Title: GWAS in hail
+# Author: Heidi Steiner
+# Date: 2023-03-16
+# Description: run genome wide linear regressions in python with hail
+
+
 #### open CyVerse discovery environment
 #### launch jupyterlab datascience app
 #### open terminal from launcher
